@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <title>Inicio HTML</title>
+</head>
+
+<body>
+
+<!--
+    <h1 id="titulo-grande">Actividad 3 - Creación de elementos, obtención de datos y CRUD basic</h1>
+    
+    <h2>Actividad grupal de la semana 3 del módulo de Front-End</h2>
+    
+    <ul>
+        <li>Se creará una página web con un formulario que creará elementos o productos.</li>
+        <li>A través del formulario crearemos módulos, recogiendo información y plasmándola en nuestra web que pintará una serie de productos y precios.</li>
+        <li>En este ejercicio afianzaramos la recogida de datos del usuario y tambien de los eventos que haya activado en la web.</li>
+    </ul>
+    <br><br>
+
+    <div class="caja-central">
+        <span class="imagen-boleto">
+            <img src="./assets/img/176-536x354.jpg" alt="playa con rocas" style="width:536px;height:354px;">
+        </span>
+        
+        <span class="formulario">
+            <form target="_blank">
+                <div>
+                    <label for="city">Ciudad</label><br>
+                    <input type="text" id="city" name="city" placeholder="Escribe tu ciudad">
+                </div>
+                <div>
+                    <label for="population">Población</label><br>
+                    <input type="number" id="population" name="population" placeholder="Escribe la población">
+                </div>
+                <div>
+                    <label for="founding-date">Fecha fundación</label><br>
+                    <input type="date" id="founding-date" name="founding-date">
+                </div>
+            </form>
+        </span>
+    </div>
+-->
+
+
+    <div class="container d-flex justify-content-around box-blue">
+      <div class="tweet-container me-4 box-blue"></div>
+      <div class="ms-4 box-blue">
+        <h1 style="font-weight: 700;" class="box-blue">¡Gana un viaje gratis!</h1>
+        <hr>
+  
+        <form id="tweet-form" class="box-blue">
+          <div class="form-group box-blue">
+            <label for="title" class="box-blue">Destino</label>
+            <input id="title-input" type="text" class="box-blue form-control mb-3 mt-2" aria-describedby="emailHelp" placeholder="Escribe tu destino aquí">
+          </div>
+          <div class="form-group box-blue">
+            <label for="description" class="box-blue">Presupuesto</label>
+            <input id="description-input" type="number" class="box-blue form-control mb-3 mt-2" aria-describedby="emailHelp" placeholder="Estima tu presupuesto">
+          </div>
+          <div class="form-group box-blue">
+            <label for="description" class="box-blue">Fecha de salida</label>
+            <input id="description-input" type="date" class="box-blue form-control mb-3 mt-2" aria-describedby="emailHelp" placeholder="Elige una fecha de salida">
+          </div>
+          <button id="create-tweet-button" type="submit" class="box-blue btn btn-primary w-100">Prueba tu suerte</button>
+        </form>
+  
+      </div>
+    </div>
+    
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html> 
