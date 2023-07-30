@@ -1,19 +1,19 @@
 window.addEventListener('DOMContentLoaded', () => {
     console.log("Hello World, the DOM is loaded.");
 
-    const cityInput = document.getElementById("city");
-    const populationInput = document.getElementById("population");
-    const botonButton = document.querySelector("#botontonton");
+    const destinoInput = document.getElementById("destino");
+    const presupuestoInput = document.getElementById("presupuesto");
+    const sorteoButton = document.querySelector("#draw-lottery-ticket-button");
 
-    console.log(cityInput.id, populationInput.id);
-    console.log(botonButton);
+    console.log(destinoInput.id, presupuestoInput.id);
+    console.log(sorteoButton);
 
-    botonButton.addEventListener("click", (event) => {
+    sorteoButton.addEventListener("click", (event) => {
         event.preventDefault();
         console.log(event);
 
-        const city = cityInput.value;
-        const population = populationInput.value;
-        console.log(city, population);
+        const destino = destinoInput.value;
+        const presupuesto = presupuestoInput.value;
+        console.log(destino, presupuesto);
     });
 });
