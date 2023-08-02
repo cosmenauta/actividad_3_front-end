@@ -18,6 +18,11 @@ window.addEventListener('DOMContentLoaded', () => {
         const destino = destinoInput.value;
         const presupuesto = presupuestoInput.value;
         const fechaSalida = fechaSalidaInput.value;
+        let fechaSalidaFormat = new Date(fechaSalida)
+        //añadido para compensar la diferencia horaria
+        fechaSalidaFormat.setMinutes(fechaSalidaFormat.getMinutes() + fechaSalidaFormat.getTimezoneOffset())
+        const fechaFormateada = fechaSalidaFormat.toLocaleDateString();
+        console.log(fechaFormateada);
         /* const formatFecha = fechaSalida.datepicker({  format: 'dd-mm-yyyy'  });  
         console.log(formatFecha); */
 
@@ -66,7 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 <p id="tweet-description">Tu presupuesto aprobado </br> para gastos es: </br>${presupuesto}€</p>
                 </div>
                 <div class="fechaSalida">
-                <p id="tweet-description">La fecha de </br> tu viaje es: </br>${fechaSalida}</p>
+                <p id="tweet-description">La fecha de </br> tu viaje es: </br>${fechaFormateada}</p>
                 </div>
             
                 <div class="bottom-section d-flex justify-content-end">
