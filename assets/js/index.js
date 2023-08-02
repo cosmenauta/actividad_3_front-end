@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const fechaFormateada = fechaSalidaFormat.toLocaleDateString();
 
         const  valueSelected = destinoInput.options[destinoInput.selectedIndex].text;
-        console.log(valueSelected);
+  
      
 
         if (destino === "") {
@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         if(destino !== "" && presupuesto > 99 && presupuesto < 4001 && fechaSalida !== ""){
-            console.log("pasa7");
+
                 lotteryBox.style.backgroundImage = `url(./assets/img/${destino}.jpg)`;
             
                 lotteryBox.innerHTML =
