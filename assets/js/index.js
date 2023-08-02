@@ -22,10 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
         //añadido para compensar la diferencia horaria
         fechaSalidaFormat.setMinutes(fechaSalidaFormat.getMinutes() + fechaSalidaFormat.getTimezoneOffset())
         const fechaFormateada = fechaSalidaFormat.toLocaleDateString();
-        console.log(fechaFormateada);
-        /* const formatFecha = fechaSalida.datepicker({  format: 'dd-mm-yyyy'  });  
-        console.log(formatFecha); */
-
 
         const  valueSelected = destinoInput.options[destinoInput.selectedIndex].text;
         console.log(valueSelected);
@@ -33,27 +29,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if (destino === "") {
             destinoInput.classList.add("is-invalid");
-            console.log("pasa1");
+
           } else {
             destinoInput.classList.remove("is-invalid");
-            console.log("pasa2");
+ 
           }
           
           
         if(presupuesto < 100){
             presupuestoInput.classList.add("is-invalid");
-            console.log("pasa3");
         } else{
             presupuestoInput.classList.remove("is-invalid");
-            console.log("pasa4");
+
         }
         if(fechaSalida ===""){
             fechaSalidaInput.classList.add("is-invalid");
-            console.log("pasa5");
         } else{
             fechaSalidaInput.classList.remove("is-invalid");
             
-            console.log("pasa6");
         }
 
         if(destino !== "" && presupuesto > 99 && presupuesto < 4001 && fechaSalida !== ""){
@@ -79,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 </div>
             `; 
             
-                console.log(destino, presupuesto, fechaSalida, lotteryBox.value);
+                console.log(destino, presupuesto, fechaFormateada);
 
                 destinoInput.value = "";
                 presupuestoInput.value = 0;
