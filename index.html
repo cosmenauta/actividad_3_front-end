@@ -5,35 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/styles/index.css">
     <title>Actividad 3 grupal Front-End</title>
 </head>
 
 <body>
-
     <div class="container d-flex justify-content-around box-blue">
-      <div class="tweet-container me-4 box-blue"></div>
-      <div class="ms-4 box-blue">
-        <h1 style="font-weight: 700;" class="box-blue">¡Gana un viaje gratis!</h1>
-        <hr>
-  
-        <form id="tweet-form" class="box-blue">
-          <div class="form-group box-blue">
-            <label for="title" class="box-blue">Destino</label>
-            <input id="destino-input" type="text" class="box-blue form-control mb-3 mt-2" aria-describedby="emailHelp" placeholder="Escribe tu destino aquí">
-          </div>
-          <div class="form-group box-blue">
-            <label for="presupuesto" class="box-blue">Presupuesto</label>
-            <input id="presupuesto-input" type="number" class="box-blue form-control mb-3 mt-2" aria-describedby="emailHelp" placeholder="Estima tu presupuesto">
-          </div>
-          <div class="form-group box-blue">
-            <label for="fecha_salida" class="box-blue">Fecha de salida</label>
-            <input id="fecha_salida-input" type="date" class="box-blue form-control mb-3 mt-2" aria-describedby="emailHelp" placeholder="Elige una fecha de salida">
-          </div>
-          <button id="draw-lottery-ticket-button" type="submit" class="box-blue btn btn-primary w-100">Prueba tu suerte</button>
-        </form>
-  
-      </div>
+      <div class="container d-flex custom-back">
+
+        
+      
+        <div class="lottery-container me-4 box-blue">
+          <!-- //campo a rellenar -->
+        </div>
+              <div class="ms-4 box-blue">
+                <h1 style="font-weight: 700;" class="box-blue">¡Gana un viaje gratis!</h1>
+                <hr>
+          
+                <form id="tweet-form" class="box-blue">
+                  <div class="form-group box-blue">
+                    <label for="title" class="box-blue">Destino</label>
+                    <div class="form-group">
+                      <select class="form-control required" id="FormSelectDestino">
+                        <option value="" selected>Elegir Destino...</option>
+                        <option value="par">París</option>
+                        <option value="rom">Roma</option>
+                        <option value="tok">Tokio</option>
+                        <option value="ams">Amsterdam</option>
+                        <option value="brus">Bruselas</option>
+                      </select> 
+                      <div class="invalid-feedback">
+                        Por favor seleccione una ciudad!
+                    </div>
+                   <!--  <input id="destino-input" type="text" class="box-blue form-control mb-3 mt-2" aria-describedby="emailHelp" placeholder="Escribe tu destino aquí">
+                     -->
+
+                  </div>
+                  <div class="form-group box-blue">
+                    <label for="presupuesto" class="box-blue">Presupuesto entre 100€ y 4000€</label>
+                    <input id="presupuesto-input" type="number" class="box-blue form-control mb-3 mt-2" aria-describedby="emailHelp" placeholder="Estima tu presupuesto" min="100" max="4000">
+                    <div class="invalid-feedback">
+                      Por favor seleccione un importe!
+                  </div>
+                  </div>
+                  <div class="form-group box-blue">
+                    <label for="fecha_salida" class="box-blue">Fecha de salida entre el 15/08/2023 y el 15/10/2022</label>
+                    <input id="fechaSalida_input" type="date" class="box-blue form-control mb-3 mt-2" aria-describedby="emailHelp" placeholder="Elige una fecha de salida" min="2023-08-15"
+                    max="2023-10-15"required>
+                    <div class="invalid-feedback">
+                      Por favor seleccione una fecha válida!
+                  </div>
+                  </div>
+                  <button id="draw-lottery-ticket-button" type="submit" class="box-blue btn btn-primary w-100">Prueba tu suerte</button>
+                </form>
+          
+              </div>
+
+    </div>
     </div>
     
     <script src="./assets/js/index.js"></script>
