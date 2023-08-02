@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const destino = destinoInput.value;
         const presupuesto = presupuestoInput.value;
         const fechaSalida = fechaSalidaInput.value;
+        console.log(presupuesto,presupuestoInput.min );
 
         let fechaSalidaFormat = new Date(fechaSalida)
         //añadido para compensar la diferencia horaria
@@ -35,10 +36,10 @@ window.addEventListener('DOMContentLoaded', () => {
             destinoInput.classList.remove("is-invalid");
         }
         
-        if (presupuesto < presupuestoInput.min || presupuesto > presupuestoInput.max) {
-            presupuestoInput.classList.add("is-invalid");
-        } else {
+        if (presupuesto >= presupuestoInput.min && presupuesto <= presupuestoInput.max) {
             presupuestoInput.classList.remove("is-invalid");
+        } else {
+            presupuestoInput.classList.add("is-invalid");
         }
         
         if (fechaSalida < fechaSalidaInput.min || fechaSalida > fechaSalidaInput.max) {
