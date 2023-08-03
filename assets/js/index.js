@@ -36,7 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         
         if (presupuesto >= min && presupuesto <= max) {
-        // if (presupuesto >= 100 && presupuesto <= 4000) {
             console.log("Entre en if: pres: min: max:"+presupuesto,min,max);
             presupuestoInput.classList.remove("is-invalid");
         } else {
