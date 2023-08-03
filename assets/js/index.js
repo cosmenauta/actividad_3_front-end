@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const presupuesto = new Number(presupuestoInput.value);
         const min = new Number(presupuestoInput.min);
         const max = new Number(presupuestoInput.max);
-        console.log(presupuesto,min,max );
+        console.log(presupuesto, min, max );
 
         let fechaSalidaFormat = new Date(fechaSalida)
         //añadido para compensar la diferencia horaria
@@ -36,10 +36,10 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         
         if (presupuesto >= min && presupuesto <= max) {
-            console.log("Entre en if: pres: min: max:"+presupuesto,min,max);
+            //console.log("Entre en if: pres: min: max:" + presupuesto, min, max);
             presupuestoInput.classList.remove("is-invalid");
         } else {
-            console.log("Entre en else: "+presupuesto,min,max)
+            //console.log("Entre en else: " + presupuesto, min, max);
             presupuestoInput.classList.add("is-invalid");
         }
         
