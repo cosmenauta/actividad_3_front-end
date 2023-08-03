@@ -43,6 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         
         if (fechaSalida < fechaSalidaInput.min || fechaSalida > fechaSalidaInput.max) {
+            console.log("entra 1"+fechaSalidaInput.min)
             fechaSalidaInput.classList.add("is-invalid");
         } else {
             fechaSalidaInput.classList.remove("is-invalid");
