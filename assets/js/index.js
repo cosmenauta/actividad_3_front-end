@@ -3,22 +3,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const destinoInput = document.getElementById("FormSelectDestino");
     const presupuestoInput = document.getElementById("presupuesto-input");
-    //añadido campo Fecha 
     const fechaSalidaInput = document.getElementById("fechaSalida_input")
-    // End cambios
     const sorteoButton = document.querySelector("#draw-lottery-ticket-button");
     const lotteryBox = document.querySelector(".lottery-container");
 
-    //console.log(destinoInput.id, presupuestoInput.id,fechaSalidaInput.id);
-    //console.log(sorteoButton);
 
     sorteoButton.addEventListener("click", (event) => {
         event.preventDefault();
 
         const destino = destinoInput.value;
-        const presupuesto = presupuestoInput.value;
         const fechaSalida = fechaSalidaInput.value;
-        console.log(presupuesto,presupuestoInput.min );
+        //cambios parseo a Number
+        const presupuesto = new Number(presupuestoInput.value);
+        const min = new Number(presupuestoInput.min);
+        const max = new Number(presupuestoInput.max);
+        console.log(presupuesto,min,max );
 
         let fechaSalidaFormat = new Date(fechaSalida)
         //añadido para compensar la diferencia horaria
@@ -36,20 +35,21 @@ window.addEventListener('DOMContentLoaded', () => {
             destinoInput.classList.remove("is-invalid");
         }
         
-        if (presupuesto >= presupuestoInput.min && presupuesto <= presupuestoInput.max) {
+        if (presupuesto >= min && presupuesto <= max) {
+            console.log("Entre en if: pres: min: max:"+presupuesto,min,max);
             presupuestoInput.classList.remove("is-invalid");
         } else {
+            console.log("Entre en else: "+presupuesto,min,max)
             presupuestoInput.classList.add("is-invalid");
         }
         
         if (fechaSalida < fechaSalidaInput.min || fechaSalida > fechaSalidaInput.max) {
-            console.log("entra 1"+fechaSalidaInput.min)
             fechaSalidaInput.classList.add("is-invalid");
         } else {
             fechaSalidaInput.classList.remove("is-invalid");
         }
         
-        if (destino !== "" && presupuesto >= presupuestoInput.min && presupuesto <= presupuestoInput.max && fechaSalida >= fechaSalidaInput.min && fechaSalida <= fechaSalidaInput.max) {
+        if (destino !== "" && presupuesto >= min && presupuesto <= max && fechaSalida >= fechaSalidaInput.min && fechaSalida <= fechaSalidaInput.max) {
             lotteryBox.style.backgroundImage = `url(./assets/img/${destino}.jpg)`;
         
             lotteryBox.innerHTML = `
